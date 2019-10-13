@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1568352948",
-      "filename": "lineage-16.0-20190913-UNOFFICIAL-himawl.zip",
-      "id": "f5a3c080278a54ac0bbda257da21895b",
+      "datetime": "1570980443",
+      "filename": "lineage-16.0-20191013-UNOFFICIAL-himawl.zip",
+      "id": "65225169ec602ea277d74d9280888996",
       "romtype": "UNOFFICIAL",
       "size": "556245519",
-      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/16.0/himawl/lineage-16.0-20190913-UNOFFICIAL-himawl.zip",
+      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/16.0/himawl/lineage-16.0-20191013-UNOFFICIAL-himawl.zip",
       "version": "16.0"
     }
   ]
