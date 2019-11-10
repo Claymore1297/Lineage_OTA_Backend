@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1570957066",
-      "filename": "lineage-16.0-20191013-UNOFFICIAL-himaul.zip",
-      "id": "6cc8ca23dc024b66b1321ec23e7ed89f",
+      "datetime": "1573372196",
+      "filename": "lineage-16.0-20191110-UNOFFICIAL-himaul.zip",
+      "id": "bc7d603a8f94cd6ba2d123610278720c",
       "romtype": "UNOFFICIAL",
       "size": "556245519",
-      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/16.0/himaul/lineage-16.0-20191013-UNOFFICIAL-himaul.zip",
+      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/16.0/himaul/lineage-16.0-20191110-UNOFFICIAL-himaul.zip",
       "version": "16.0"
     }
   ]
