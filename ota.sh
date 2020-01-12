@@ -23,7 +23,6 @@ version=$(cut -d '-' -f2 <<<"$filename")
 romtype=$(cut -d '-' -f4 <<<"$filename")
 target=$(cut -d '-' -f5 <<<"${filename%.*}")
 
-datetime=$(unzip -p "$file" META-INF/com/android/metadata |grep post-timestamp | cut -d= -f2)
 id=$(md5sum "$file" | awk '{ print $1 }')
 size=$(stat -c %s "$file")
 
@@ -36,6 +35,8 @@ if [ -e "${file}.md5sum" ]; then
 		exit 1
 	fi
 fi
+
+datetime=$(unzip -p "$file" META-INF/com/android/metadata | grep post-timestamp | cut -d= -f2)
 
 url=${baseurl%%/}/$version/$target/$filename
 
