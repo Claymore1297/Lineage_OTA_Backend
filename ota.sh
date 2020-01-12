@@ -12,7 +12,7 @@ if [ "$2" != "" ]; then
 fi
 
 file=$1
-filename=$(basename $file)
+filename=$(basename "$file")
 
 if [ ! -e "$file" ]; then
 	>&2 echo File \"$file\" not found
@@ -23,12 +23,12 @@ version=$(cut -d '-' -f2 <<<"$filename")
 romtype=$(cut -d '-' -f4 <<<"$filename")
 target=$(cut -d '-' -f5 <<<"${filename%.*}")
 
-datetime=$(unzip -p $file META-INF/com/android/metadata |grep post-timestamp | cut -d= -f2)
-id=$(md5sum $file | awk '{ print $1 }')
-size=$(stat -c %s $file)
+datetime=$(unzip -p "$file" META-INF/com/android/metadata |grep post-timestamp | cut -d= -f2)
+id=$(md5sum "$file" | awk '{ print $1 }')
+size=$(stat -c %s "$file")
 
 if [ -e "${file}.md5sum" ]; then
-	checkid=$(cat ${file}.md5sum | awk '{ print $1 }')
+	checkid=$(cat "${file}.md5sum" | awk '{ print $1 }')
 	if [ "$id" != "$checkid" ]; then
 		>&2 echo Found \"${file}.md5sum\", but checksum doesn\'t match
 		>&2 echo "Calculated MD5: $id"
