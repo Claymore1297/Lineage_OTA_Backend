@@ -39,7 +39,7 @@ fi
 
 url=${baseurl%%/}/$version/$target/$filename
 
-cat << EOF
+cat << EOF > "${target}.json"
 {
   "response": [
     {
@@ -54,3 +54,5 @@ cat << EOF
   ]
 }
 EOF
+
+echo "Wrote data into \"${target}.json\""
