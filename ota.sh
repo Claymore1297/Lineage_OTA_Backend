@@ -1,6 +1,6 @@
 #!/bin/bash
 
-baseurl="https://mirror.codebucket.de/claymore1297/LineageOS/17.1/hima/"
+baseurl="https://mirror.codebucket.de/claymore1297/LineageOS/"
 
 if [ "$1" == "" ]; then
 	>&2 echo "Usage: $0 <filename> [<baseurl>]"
@@ -19,12 +19,16 @@ if [ ! -e "$file" ]; then
 	exit 1
 fi
 
+version=$(cut -d '-' -f2 <<<"$filename")
+romtype=$(cut -d '-' -f4 <<<"$filename")
+target=$(cut -d '-' -f5 <<<"${filename%.*}")
+
 datetime=$(date +%s)
 id=$(md5sum $file | awk '{ print $1 }')
-romtype=$(cut -d '-' -f4 <<<"$filename")
 size=$(stat -c %s $file)
-url=${baseurl%%/}/$filename
-version=$(cut -d '-' -f2 <<<"$filename")
+
+url=${baseurl%%/}/$version/$target/$filename
+
 cat << EOF
 {
   "response": [
