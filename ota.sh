@@ -27,6 +27,16 @@ datetime=$(unzip -p $file META-INF/com/android/metadata |grep post-timestamp | c
 id=$(md5sum $file | awk '{ print $1 }')
 size=$(stat -c %s $file)
 
+if [ -e "${file}.md5sum" ]; then
+	checkid=$(cat ${file}.md5sum | awk '{ print $1 }')
+	if [ "$id" != "$checkid" ]; then
+		>&2 echo Found \"${file}.md5sum\", but checksum doesn\'t match
+		>&2 echo "Calculated MD5: $id"
+		>&2 echo "Original MD5:   $checkid"
+		exit 1
+	fi
+fi
+
 url=${baseurl%%/}/$version/$target/$filename
 
 cat << EOF
