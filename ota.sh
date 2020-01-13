@@ -42,7 +42,7 @@ datetime=$(unzip -p "$file" META-INF/com/android/metadata | grep post-timestamp 
 
 url=${baseurl%%/}/$version/$target/$filename
 
-cat << EOF > "${target}.json"
+cat << EOF | tee "${target}.json"
 {
   "response": [
     {
