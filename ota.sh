@@ -34,6 +34,8 @@ if [ -e "${file}.md5sum" ]; then
 		>&2 echo "Original MD5:   $checkid"
 		exit 1
 	fi
+else
+	>&2 echo Warning: \"${file}.md5sum\" not found, not verifying checksum
 fi
 
 datetime=$(unzip -p "$file" META-INF/com/android/metadata | grep post-timestamp | cut -d= -f2)
