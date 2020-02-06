@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1580836335",
-      "filename": "lineage-17.1-20200204-UNOFFICIAL-hima.zip",
-      "id": "0e2ac0b22a0d62d7c14a7090569a671b",
+      "datetime": "1580980781",
+      "filename": "lineage-17.1-20200206-UNOFFICIAL-hima.zip",
+      "id": "ed6a048566e7b4e0cddb82ed251168b1",
       "romtype": "UNOFFICIAL",
-      "size": "574000453",
-      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/17.1/hima/lineage-17.1-20200204-UNOFFICIAL-hima.zip",
+      "size": "573893092",
+      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/17.1/hima/lineage-17.1-20200206-UNOFFICIAL-hima.zip",
       "version": "17.1"
     }
   ]
