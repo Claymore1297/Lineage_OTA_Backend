@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": "1600699189",
-      "filename": "lineage-17.1-20200921-UNOFFICIAL-hima.zip",
-      "id": "18ed9dddfa41eee2443b41bb7e36d641",
-      "romtype": "UNOFFICIAL",
-      "size": "602625752",
-      "url": "https://mirror.codebucket.de/claymore1297/LineageOS/17.1/hima/lineage-17.1-20200921-UNOFFICIAL-hima.zip",
-      "version": "17.1"
+      "datetime": "",
+      "filename": "hima.json",
+      "id": "fd93b6246266649a3ec3c0b88e482116",
+      "romtype": "hima.json",
+      "size": "381",
+      "url": "/home/julian/android/lineage/18.0/out/target/product/hima/lineage_hima-ota-eng.julian.zip/hima.json/hima/hima.json",
+      "version": "hima.json"
     }
   ]
 }
